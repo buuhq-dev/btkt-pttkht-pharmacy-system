@@ -331,7 +331,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>Quản lý sản phẩm</h1>
+        <h1 class="fw-bold">Nhập kho</h1>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -344,9 +344,167 @@
     <section class="section dashboard">
      
     <div class="row">
-        Nhập kho
+      <div class="col-md-12">
+        <a class="fw-bold text-primary" type="button" data-bs-toggle="modal" data-bs-target="#Nhap-kho-theo-HDMH-Modal"><i class="bi bi-plus-circle"></i> Nhập Kho Từ Đơn Đặt Hàng</a> 
+        
+      </div>
+      <div class="col-md-12 pt-2">
+        
+        <a class="fw-bold text-secondary" type="button" data-bs-toggle="modal" data-bs-target="#Nhap-kho-manual-Modal"><i class="bi bi-plus-circle"></i> Nhập Kho Theo Sản phẩm Đơn Lẻ</a> 
+      </div>
+
+    <div class="row">
+      <h4 class="pt-4 fw-bold text-primary">Lịch sử nhập kho</h2>
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Action</th>
+              <th>Phiếu nhập kho</th>
+              <th>Hóa đơn mua hàng</th>
+              <th data-type="date" data-format="YYYY/DD/MM">Ngày nhập kho</th>
+              <th>Người thao tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="text-primary" href="#"><i class="bi bi-pencil-square"></i> Edit</a> <a class="text-secondary" href="#"><i class="bi bi-box-arrow-up-right"></i> Detail</a></td>
+              <td>NK001</td>
+              <td>HD1, HD2</td>
+              <td>2005/02/11</td>
+              <td>User 1</td>
+            </tr>
+            <tr>
+              <td><a class="text-primary" href="#"><i class="bi bi-pencil-square"></i> Edit</a> <a class="text-secondary" href="#"><i class="bi bi-box-arrow-up-right"></i> Detail</a></td>
+              <td>NK032</td>
+              <td>HD11, HD12</td>
+              <td>2006/02/11</td>
+              <td>User 2</td>
+            </tr>
+            <tr>
+              <td><a class="text-primary" href="#"><i class="bi bi-pencil-square"></i> Edit</a> <a class="text-secondary" href="#"><i class="bi bi-box-arrow-up-right"></i> Detail</a></td>
+              <td>NK003</td>
+              <td>HD31, HD32</td>
+              <td>2005/02/11</td>
+              <td>User 1</td>
+            </tr>
+          </tbody>
+        </table>
     </div>
       
+    <div class="modal fade" id="Nhap-kho-theo-HDMH-Modal" tabindex="-1">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold text-primary">Nhập Kho Từ Đơn Đặt Hàng</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th><input type="checkbox"> All </th>
+                  <th>Mã Đơn hàng</th>
+                  <th>Số Hợp Đồng</th>
+                  <th>Nhà cung cấp</th>
+                  <th data-type="date" data-format="YYYY/DD/MM">Ngày giao hàng</th>
+                  <th>Người đặt hàng</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>OR001</td>
+                  <td>HD001</td>
+                  <td>XYZ</td>
+                  <td>2005/02/11</td>
+                  <td>User 1</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>NK032</td>
+                  <td>HD002</td>
+                  <td>XYZ</td>
+                  <td>2006/02/11</td>
+                  <td>User 2</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>NK003</td>
+                  <td>HD003</td>
+                  <td>XYZ</td>
+                  <td>2005/02/11</td>
+                  <td>User 1</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>NK004</td>
+                  <td>HD004</td>
+                  <td>XYZ</td>
+                  <td>2005/02/11</td>
+                  <td>User 2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Nhập kho</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Extra Large Modal-->
+
+    <div class="modal fade" id="Nhap-kho-manual-Modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold text-primary">Nhập Kho Theo Sản phẩm Đơn Lẻ</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-12">
+                <label for="inputNanme4" class="form-label fw-bold text-primary">Tên sản phẩm</label>
+                <input type="text" class="form-control" id="inputNanme4">
+              </div>
+              <div class="col-12">
+                <label for="inputEmail4" class="form-label fw-bold text-primary">Hóa đơn mua hàng</label>
+                <input type="text" class="form-control" id="inputEmail4">
+              </div>
+              <div class="col-12">
+                <label for="inputState" class="form-label fw-bold text-primary">Nhà cung cấp</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>AB Pharmacy</option>
+                  <option>BC Pharmacy</option>
+                  <option>CD Pharmacy</option>
+                  <option>DE Pharmacy</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="inputState" class="form-label fw-bold text-primary">Nhóm sản phẩm</label>
+                <select id="inputState" class="form-select" multiple aria-label="multiple select example">
+                  <option selected>Choose...</option>
+                  <option>Kháng sinh</option>
+                  <option>Xương khớp</option>
+                  <option>Nội tiết</option>
+                  <option>Tim mạch</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="inputDate" class="form-label fw-bold text-primary">Ngày hết hạn</label>
+                <input type="date" class="form-control">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Nhập kho</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Extra Large Modal-->
+
     </section>
 
   </main><!-- End #main -->
