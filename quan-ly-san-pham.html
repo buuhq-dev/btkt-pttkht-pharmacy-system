@@ -341,8 +341,8 @@
 
     <section class="section dashboard">
      <div class="row">
-        <div class="col-md-4">
-            <a class="fw-bold text-primary" href="nhap-kho.html"><i class="bi bi-plus-circle"></i> Nhập kho</a> <i class="bi bi-caret-right"></i> <a class="fw-bold text-danger" href="ban-hang.html"><i class="bi bi-dash-circle"></i> Xuất kho</a>
+        <div class="col-md-8">
+            <a class="fw-bold text-primary" href="nhap-kho.html"><i class="bi bi-plus-circle"></i> Nhập kho</a> <i class="bi bi-caret-right"></i> <a class="fw-bold text-primary" href="ban-hang.html"><i class="bi bi-dash-circle"></i> Xuất hóa đơn bán hàng</a>
         </div>
         
      </div> 
@@ -362,7 +362,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a class="text-primary" href="#"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" href="#"><i class="bi bi-trash"></i></a></td>
+                    <td><a class="text-primary" type="button" data-bs-toggle="modal" data-bs-target="#Edit-Product-Modal"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" href="#"><i class="bi bi-trash"></i></a></td>
                     <td>Unity Pugh</td>
                     <td>Kháng sinh</td>
                     <td>Curicó</td>
@@ -370,7 +370,7 @@
                     <td>11</td>
                   </tr>
                   <tr>
-                    <td><a class="text-primary" href="#"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" href="#"><i class="bi bi-trash"></i></a></td>
+                    <td><a class="text-primary" type="button" data-bs-toggle="modal" data-bs-target="#Edit-Product-Modal"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" href="#"><i class="bi bi-trash"></i></a></td>
                     <td>Theodore Duran</td>
                     <td>Kháng sinh</td>
                     <td>Dhanbad</td>
@@ -378,7 +378,7 @@
                     <td>11</td>
                   </tr>
                   <tr>
-                    <td><a class="text-primary" href="#"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" href="#"><i class="bi bi-trash"></i></a></td>
+                    <td><a class="text-primary" type="button" data-bs-toggle="modal" data-bs-target="#Edit-Product-Modal"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" href="#"><i class="bi bi-trash"></i></a></td>
                     <td>Kylie Bishop</td>
                     <td>Kháng sinh</td>
                     <td>Norman</td>
@@ -386,7 +386,7 @@
                     <td>11</td>
                   </tr>
                   <tr>
-                    <td><a class="text-primary" href="#"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" href="#"><i class="bi bi-trash"></i></a></td>
+                    <td><a class="text-primary" type="button" data-bs-toggle="modal" data-bs-target="#Edit-Product-Modal"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" href="#"><i class="bi bi-trash"></i></a></td>
                     <td>Willow Gilliam</td>
                     <td>Kháng sinh</td>
                     <td>Amqui</td>
@@ -469,6 +469,61 @@
         </table>
     </div>
       
+
+    <div class="modal fade" id="Edit-Product-Modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold text-primary">Chỉnh sửa sản phẩm</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-12">
+                <label for="inputNanme1" class="form-label fw-bold text-primary">Tên sản phẩm</label>
+                <input type="text" class="form-control" id="inputNanme1" value="Amoxilin">
+              </div>
+              <div class="col-12">
+                <label for="inputNanme2" class="form-label fw-bold text-primary">Số lượng</label>
+                <input type="number" class="form-control" id="inputNanme2" value="10">
+              </div>
+              <div class="col-12">
+                <label for="inputEmail3" class="form-label fw-bold text-primary">Hóa đơn mua hàng</label>
+                <input type="text" class="form-control" id="inputEmail3" value="HD1234">
+              </div>
+              <div class="col-12">
+                <label for="inputState1" class="form-label fw-bold text-primary">Nhà cung cấp</label>
+                <select id="inputState1" class="form-select">
+                  <option>Choose...</option>
+                  <option selected>AB Pharmacy</option>
+                  <option>BC Pharmacy</option>
+                  <option>CD Pharmacy</option>
+                  <option>DE Pharmacy</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="inputState" class="form-label fw-bold text-primary">Nhóm sản phẩm</label>
+                <select id="inputState" class="form-select" multiple aria-label="multiple select example">
+                  <option>Choose...</option>
+                  <option selected>Kháng sinh</option>
+                  <option selected>Xương khớp</option>
+                  <option>Nội tiết</option>
+                  <option>Tim mạch</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="inputDate" class="form-label fw-bold text-primary">Ngày hết hạn</label>
+                <input type="date" class="form-control" value="2024-12-12">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Chỉnh sửa</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Extra Large Modal-->
     </section>
 
   </main><!-- End #main -->
