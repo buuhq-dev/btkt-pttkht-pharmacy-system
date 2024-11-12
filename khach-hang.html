@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Mua hàng - A-Z Pharmacy</title>
+  <title>Quản lý Khách hàng - A-Z Pharmacy</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -342,7 +342,7 @@
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Login</span>
         </a>
-      </li><!-- End Login Page Nav -->
+      </li><!-- End Login Page Nav -->     
 
     </ul>
 
@@ -351,248 +351,162 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      
+        <h2 class="fw-bold">Quản lý Khách hàng</h2>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">Yêu cầu Mua hàng</li>
+            <li class="breadcrumb-item active">Quản lý Khách hàng</li>
           </ol>
         </nav>
       </div><!-- End Page Title -->
 
     <section class="section dashboard">
-        
-        <form>
-            <h2 class="fw-bold text-primary">Phiếu yêu cầu mua hàng</h2>
-
-            <div class="row g-3">
-                <div class="col-md-4">
-                  <label for="inputName5" class="form-label fw-bold">Người yêu cầu</label>
-                  <input type="text" class="form-control" id="inputName5" value="Nguyễn Văn A">
-                </div>
-                <div class="col-md-4">
-                  <label for="inputEmail6" class="form-label fw-bold">Ngày yêu cầu</label>
-                  <input type="date" class="form-control" id="inputEmail6">
-                </div>
-            </div>
-
-            <div class="pt-4"><a type="button" data-bs-toggle="modal" data-bs-target="#Danh-Sach-San-Pham-Modal" class="fw-bold text-primary"><i class="bi bi-arrow-down-square"></i> Thêm sản phẩm</a></div>
-          
-          
-            <!-- Primary Color Bordered Table -->
-            <div class="row">
-                <div class="col-md-8">
-                    <table class="mt-2 table table-striped">
-                        <thead>
-                          <tr>
-                            <th scope="col">##</th>
-                            <th scope="col">Tên thuốc</th>
-                            <th scope="col">Số lượng</th>
-                            <th scope="col">Nhà cung cấp</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Panterazon 15mg</td>
-                            <td>21</td>
-                            <td>
-                                <select id="inputState" class="form-select">
-                                  <option selected>Choose...</option>
-                                  <option>AB Pharma</option>
-                                  <option>BC Pharma</option>
-                                  <option>CD Pharma</option>
-                                </select>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Penicilin 200mg</td>
-                            <td>14</td>
-                            <td>
-                                <select id="inputState" class="form-select">
-                                  <option selected>Choose...</option>
-                                  <option>AB Pharma</option>
-                                  <option>BC Pharma</option>
-                                  <option>CD Pharma</option>
-                                </select>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Codein</td>
-                            <td>14</td>
-                            <td>
-                                <select id="inputState" class="form-select">
-                                  <option selected>Choose...</option>
-                                  <option>AB Pharma</option>
-                                  <option>BC Pharma</option>
-                                  <option>CD Pharma</option>
-                                </select>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th scope="row">4</th>
-                            <td>Panadol</td>
-                            <td>21</td>
-                            <td>
-                                <select id="inputState" class="form-select">
-                                  <option selected>Choose...</option>
-                                  <option>AB Pharma</option>
-                                  <option>BC Pharma</option>
-                                  <option>CD Pharma</option>
-                                </select>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                </div>
-                
-            </div>
-          
-            <div class="row">
-                <div class="col-md-4">
-                    <button type="button" class="form-control w-100 btn btn-primary">Lưu Yêu cầu mua hàng</button>
-                </div>
-            </div>
-            
-        </form>
+     
+        <!-- Table with stripped rows -->
+    <div class="row">
+        <table class="table datatable">
+            <thead>
+              <tr>
+                <th>Action</th>
+                <th>Tên khách hàng</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Địa chỉ</th>
+                <th>Phân loại khách hàng</th>
+                <th>Đặt hàng gần nhất</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a class="text-primary" type="button" data-bs-toggle="modal" data-bs-target="#Edit-Product-Modal"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" type="button" data-bs-toggle="modal" data-bs-target="#Delete-Product-Modal"><i class="bi bi-trash"></i></a></td>
+                    
+                    <td>Đinh Thảo Ngân</td>
+                    <td>0900112233</td>
+                    <td>ngandt@azpharmacy.vn</td>
+                    <td>123 Lê Lai P.1, Q. 1, HCM</td>
+                    <td>Kim Cương</td>
+                    <td>2024-10-10 14:14:14</td>
+                  </tr>
+                  <tr>
+                    <td><a class="text-primary" type="button" data-bs-toggle="modal" data-bs-target="#Edit-Product-Modal"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" type="button" data-bs-toggle="modal" data-bs-target="#Delete-Product-Modal"><i class="bi bi-trash"></i></a></td>
+                   
+                    <td>Dương Thị Lan</td>
+                    <td>0900112233</td>
+                    <td>landt@azpharmacy.vn</td>
+                    <td>123 Lê Lai P.1, Q. 1, HCM</td>
+                    <td>Kim Cương</td>
+                    <td>2024-10-10 14:14:14</td>
+                  </tr>
+                  <tr>
+                    <td><a class="text-primary" type="button" data-bs-toggle="modal" data-bs-target="#Edit-Product-Modal"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" type="button" data-bs-toggle="modal" data-bs-target="#Delete-Product-Modal"><i class="bi bi-trash"></i></a></td>
+                   
+                    <td>Trần Võ Bảo Thiên</td>
+                    <td>0900112233</td>
+                    <td>thientvb@azpharmacy.vn</td>
+                    <td>123 Lê Lai P.1, Q. 1, HCM</td>
+                    <td>Kim Cương</td>
+                    
+                    <td>2024-10-10 14:14:14</td>
+                  </tr>
+                  <tr>
+                    <td><a class="text-primary" type="button" data-bs-toggle="modal" data-bs-target="#Edit-Product-Modal"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" type="button" data-bs-toggle="modal" data-bs-target="#Delete-Product-Modal"><i class="bi bi-trash"></i></a></td>
+                   
+                    <td>Nguyễn Đức Linh</td>
+                    <td>0900112233</td>
+                    <td>linhnd@azpharmacy.vn</td>
+                    <td>123 Lê Lai P.1, Q. 1, HCM</td>
+                    <td>Bạc</td>
+                    
+                    <td>2024-10-10 14:14:14</td>
+                  </tr>
+                  <tr>
+                    <td><a class="text-primary" type="button" data-bs-toggle="modal" data-bs-target="#Edit-Product-Modal"><i class="bi bi-pencil-square"></i></a> <a class="text-danger" type="button" data-bs-toggle="modal" data-bs-target="#Delete-Product-Modal"><i class="bi bi-trash"></i></a></td>
+                   
+                    <td>Huỳnh Quốc Bữu</td>
+                    <td>0900112233</td>
+                    <td>buuhq@azpharmacy.vn</td>
+                    <td>123 Lê Lai P.1, Q. 1, HCM</td>
+                    <td>Vàng</td>
+                    <td>2024-10-10 14:14:14</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
       
-        <div class="modal fade" id="Danh-Sach-San-Pham-Modal" tabindex="-1">
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title fw-bold text-primary">Thêm sản phẩm vào Yêu cầu mua hàng</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <table class="table datatable">
-                        <thead>
-                          <tr>
-                            <th>##</th>
-                            <th>Tên thuốc</th>
-                            <th>Nhóm Thuốc</th>
-                            <th>Nhà cung cấp</th>
-                            <th data-type="date" data-format="YYYY/DD/MM">Ngày hết hạn</th>
-                            <th>Số lượng tồn kho</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Unity Pugh</td>
-                                <td>Kháng sinh</td>
-                                <td>Curicó</td>
-                                <td>2005/02/11</td>
-                                <td>11</td>
-                              </tr>
-                              <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Theodore Duran</td>
-                                <td>Kháng sinh</td>
-                                <td>Dhanbad</td>
-                                <td>1999/04/07</td>
-                                <td>11</td>
-                              </tr>
-                              <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Kylie Bishop</td>
-                                <td>Kháng sinh</td>
-                                <td>Norman</td>
-                                <td>2005/09/08</td>
-                                <td>11</td>
-                              </tr>
-                              <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Willow Gilliam</td>
-                                <td>Kháng sinh</td>
-                                <td>Amqui</td>
-                                <td>2009/29/11</td>
-                                <td>11</td>
-                              </tr>
-                              <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Blossom Dickerson</td>
-                                <td>Kháng sinh</td>
-                                <td>Kempten</td>
-                                <td>2006/11/09</td>
-                                <td>11</td>
-                              </tr>
-                              <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Elliott Snyder</td>
-                                <td>Kháng sinh</td>
-                                <td>Enines</td>
-                                <td>2006/03/08</td>
-                                <td>11</td>
-                              </tr>
-                              <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Castor Pugh</td>
-                                <td>Kháng sinh</td>
-                                <td>Neath</td>
-                                <td>2014/23/12</td>
-                                <td>11</td>
-                              </tr>
-                              <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Pearl Carlson</td>
-                                <td>Kháng sinh</td>
-                                <td>Cobourg</td>
-                                <td>2014/31/08</td>
-                                <td>11</td>
-                              </tr>
-                              <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Deirdre Bridges</td>
-                                <td>Kháng sinh</td>
-                                <td>Eberswalde-Finow</td>
-                                <td>2014/26/08</td>
-                                <td>11</td>
-                              </tr>
-                              <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Daniel Baldwin</td>
-                                <td>Kháng sinh</td>
-                                <td>Moircy</td>
-                                <td>2000/11/01</td>
-                                <td>11</td>
-                              </tr>
-                              <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Phelan Kane</td>
-                                <td>Kháng sinh</td>
-                                <td>Germersheim</td>
-                                <td>1999/16/04</td>
-                                <td>11</td>
-                              </tr>
-                              <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Quentin Salas</td>
-                                <td>Kháng sinh</td>
-                                <td>Los Andes</td>
-                                <td>2011/26/01</td>
-                                <td>11</td>
-                              </tr>
-                              <tr>
-                                <td><input type="checkbox"></td>
-                                <td>Armand Suarez</td>
-                                <td>Kháng sinh</td>
-                                <td>Funtua</td>
-                                <td>1999/06/11</td>
-                                <td>11</td>
-                              </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Thêm vào Yêu cầu mua hàng</button>
-                </div>
+
+
+    <div class="modal fade" id="Edit-Product-Modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold text-primary">Chỉnh sửa Khách hàng</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-12">
+                <label for="inputNanme2" class="form-label fw-bold text-primary">Họ và Tên</label>
+                <input type="text" class="form-control" id="inputNanme2" value="Đinh Thảo Ngân">
               </div>
-            </div>
-        </div><!-- End Extra Large Modal-->
-    </section>
+              <div class="col-12">
+                <label for="inputEmail3" class="form-label fw-bold text-primary">Email</label>
+                <input type="email" class="form-control" id="inputEmail3" value="azngandt@pharmacy.vn">
+              </div>
+              <div class="col-12">
+                <label for="inputNanme1" class="form-label fw-bold text-primary">Phone</label>
+                <input type="text" class="form-control" id="inputNanme1" value="0900112233" readonly>
+              </div>
+              <div class="col-12">
+                <label for="inputState" class="form-label fw-bold text-primary">Phân loại</label>
+                <select id="inputState" class="form-select">
+                  <option>Choose...</option>
+                  <option selected>Kim Cương</option>
+                  <option>Vàng</option>
+                  <option>Bạc</option>
+                  <option>Đồng</option>
+                </select>
+              </div>
+             
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Chỉnh sửa</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Extra Large Modal-->
+    
+  
+    <div class="modal fade" id="Delete-Product-Modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold text-primary">Bạn có chắc muốn Khách hàng này không?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3">
+              <div class="col-12">
+                <label for="inputNanme1" class="form-label fw-bold text-primary">Tên Khách hàng</label>
+                <input type="text" class="form-control" id="inputNanme1" value="ngandt" readonly>
+              </div>
+              <div class="col-12">
+                <label for="inputNanme2" class="form-label fw-bold text-primary">Phone</label>
+                <input type="text" class="form-control" id="inputNanme2" value="0900112233" readonly>
+              </div>
+              
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Thực hiện Xóa Khách hàng</button>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Extra Large Modal-->
+  
+  </section>
 
   </main><!-- End #main -->
 
